@@ -259,6 +259,7 @@ async def log_start(
             solver=registry_log_name(solver), params=registry_params(solver)
         )
 
+    print(plan.steps)
     eval_plan = EvalPlan(
         name=plan.name,
         steps=[eval_plan_step(solver) for solver in plan.steps],
